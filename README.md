@@ -1,4 +1,4 @@
-# alexa-skills-listmanagement
+# Alexa.NET.ListManagement
 A simple .NET Core library for handling lists within Alexa skills
 
 Before you start make sure you have An Alexa Skill with appropriate permissions (if you're unsure of how to do this - [the docs are here](https://developer.amazon.com/docs/custom-skills/configure-permissions-for-customer-information-in-your-skill.html))
