@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27205.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alexa.NET.ListManagement", "Alexa.NET.ListManagement.csproj", "{843CC676-6A76-4DBE-8118-52C4145584F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alexa.NET.ListManagement", "src\Alexa.NET.ListManagement.csproj", "{AD7338F0-B810-44DD-B7D8-651C10BA157D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alexa.NET.ListManagement.Tests", "..\Alexa.NET.ListManagement.Tests\Alexa.NET.ListManagement.Tests.csproj", "{495330E0-83F5-44D2-9FB9-4B3490483548}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alexa.NET.ListManagement.Tests", "test\Alexa.NET.ListManagement.Tests\Alexa.NET.ListManagement.Tests.csproj", "{BD072BBA-BD6B-4484-B83C-63A7D9638457}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{843CC676-6A76-4DBE-8118-52C4145584F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{843CC676-6A76-4DBE-8118-52C4145584F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{843CC676-6A76-4DBE-8118-52C4145584F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{843CC676-6A76-4DBE-8118-52C4145584F1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{495330E0-83F5-44D2-9FB9-4B3490483548}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{495330E0-83F5-44D2-9FB9-4B3490483548}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{495330E0-83F5-44D2-9FB9-4B3490483548}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{495330E0-83F5-44D2-9FB9-4B3490483548}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD7338F0-B810-44DD-B7D8-651C10BA157D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD7338F0-B810-44DD-B7D8-651C10BA157D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD7338F0-B810-44DD-B7D8-651C10BA157D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD7338F0-B810-44DD-B7D8-651C10BA157D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD072BBA-BD6B-4484-B83C-63A7D9638457}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD072BBA-BD6B-4484-B83C-63A7D9638457}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD072BBA-BD6B-4484-B83C-63A7D9638457}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD072BBA-BD6B-4484-B83C-63A7D9638457}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
