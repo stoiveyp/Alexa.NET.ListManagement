@@ -9,6 +9,7 @@ This assumes you're already using [Alexa.NET](https://www.nuget.org/packages/Ale
 var accessToken = skillRequest.Context.System.ApiAccessToken;
 var client = new Alexa.NET.ListManagementClient(accessToken);
 ```
+&nbsp;
 
 ## Output all lists
 ```csharp
@@ -18,8 +19,9 @@ foreach(var list in lists)
     Console.WriteLine($"{list.ListId} - {list.Name}");
 }
 ```
+&nbsp;
 
-## Output list items
+## Output items for a single list
 ```csharp
 var list = await client.GetList(listId);
 foreach(var item in list.Items)
@@ -27,3 +29,10 @@ foreach(var item in list.Items)
     Console.Writeine(item.Value);
 }
 ```
+&nbsp;
+
+## Add Skill Event support to Alexa.NET
+```csharp
+ RequestConverter.RequestConverters.Add(new ListSkillEventRequestTypeConverter());
+```
+&nbsp;
