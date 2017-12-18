@@ -5,9 +5,9 @@
     <RootNamespace>Alexa.NET</RootNamespace>
     <Description>A simple .NET Core library for handling lists within Alexa skills</Description>
     <AssemblyTitle>Alexa.NET List Management</AssemblyTitle>
-    <VersionPrefix>0.1-pre</VersionPrefix>
+    <VersionPrefix>0.2-pre</VersionPrefix>
     <Authors>Steven Pears</Authors>
-    <TargetFramework>netstandard1.3</TargetFramework>
+    <TargetFramework>netstandard1.6</TargetFramework>
     <AssemblyName>Alexa.NET.ListManagement</AssemblyName>
     <PackageId>Alexa.NET.ListManagement</PackageId>
     <PackageTags>amazon;alexa;echo;dot;echo dot;lists</PackageTags>
@@ -25,9 +25,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json">
-      <Version>9.0.1</Version>
-    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+    <PackageReference Include="Alexa.NET" Version="1.4.0" />
   </ItemGroup>
 
 </Project>
