@@ -1,0 +1,25 @@
+﻿{
+  "version": "string",
+  "context": {
+    "System": {
+      "application": {
+        "applicationId": "string"
+      },
+      "user": {
+        "userId": "string",
+        "accessToken": "string",
+        "permissions": {
+          "consentToken": "string"
+        }
+      },
+      "apiEndpoint": "https://api.amazonalexa.com"
+    }
+  },
+  "request": {
+    "type": "AlexaHouseholdListEvent.ItemsDeleted",
+    "body": {
+      "listId": "09d9d7df-05be-438c-veba-9d32968b4509",
+      "listItemIds": [ "string", "..." ]
+    }
+  }
+}
