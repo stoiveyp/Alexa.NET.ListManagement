@@ -4,12 +4,10 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
-using Alexa.NET.ListManagement;
-using Alexa.NET.ListManagement.Tests;
 using Newtonsoft.Json.Linq;
 using Xunit;
 
-namespace Alexa.NET.Tests
+namespace Alexa.NET.ListManagement.Tests
 {
     public class ListTests
     {
@@ -42,7 +40,7 @@ namespace Alexa.NET.Tests
             var client = CreateListManagementClient(req =>
             {
                 Assert.Equal(HttpMethod.Get, req.Method);
-                Assert.Equal(req.RequestUri.AbsolutePath, "/v2/householdlists/");
+                Assert.Equal("/v2/householdlists/", req.RequestUri.AbsolutePath);
 
                 return new HttpResponseMessage(HttpStatusCode.OK)
                 {
@@ -109,7 +107,7 @@ namespace Alexa.NET.Tests
             var client = CreateListManagementClient(req =>
             {
                 Assert.Equal(HttpMethod.Get, req.Method);
-                Assert.Equal(req.RequestUri.AbsolutePath, "/v2/householdlists/testid/active");
+                Assert.Equal("/v2/householdlists/testid/active", req.RequestUri.AbsolutePath);
 
                 return new HttpResponseMessage(HttpStatusCode.OK)
                 {
@@ -154,7 +152,7 @@ namespace Alexa.NET.Tests
             var client = CreateListManagementClient(req =>
             {
                 Assert.Equal(HttpMethod.Get, req.Method);
-                Assert.Equal(req.RequestUri.AbsolutePath, "/v2/householdlists/list/items/item");
+                Assert.Equal("/v2/householdlists/list/items/item", req.RequestUri.AbsolutePath);
 
                 return new HttpResponseMessage(HttpStatusCode.OK)
                 {
@@ -192,7 +190,7 @@ namespace Alexa.NET.Tests
                 var input = JObject.Parse(await req.Content.ReadAsStringAsync());
 
                 Assert.Equal(input.Value<string>("status"),SkillListItemStatus.Completed);
-                Assert.Equal(input.Value<string>("value"),"value");
+                Assert.Equal("value", input.Value<string>("value"));
 
                 return new HttpResponseMessage(HttpStatusCode.OK)
                 {
@@ -229,8 +227,8 @@ namespace Alexa.NET.Tests
                 var input = JObject.Parse(await req.Content.ReadAsStringAsync());
 
                 Assert.Equal(input.Value<string>("status"), SkillListItemStatus.Completed);
-                Assert.Equal(input.Value<string>("value"), "value");
-                Assert.Equal(input.Value<int>("version"), 7);
+                Assert.Equal("value", input.Value<string>("value"));
+                Assert.Equal(7, input.Value<int>("version"));
 
                 return new HttpResponseMessage(HttpStatusCode.OK)
                 {
@@ -265,7 +263,7 @@ namespace Alexa.NET.Tests
                 var input = JObject.Parse(await req.Content.ReadAsStringAsync());
 
                 Assert.Equal(input.Value<string>("state"), SkillListState.Active);
-                Assert.Equal(input.Value<string>("name"), "new list");
+                Assert.Equal("new list", input.Value<string>("name"));
 
                 return new HttpResponseMessage(HttpStatusCode.OK)
                 {
@@ -286,8 +284,8 @@ namespace Alexa.NET.Tests
                 var input = JObject.Parse(await req.Content.ReadAsStringAsync());
 
                 Assert.Equal(input.Value<string>("state"), SkillListState.Archived);
-                Assert.Equal(input.Value<string>("name"), "new name");
-                Assert.Equal(input.Value<int>("version"), 7);
+                Assert.Equal("new name", input.Value<string>("name"));
+                Assert.Equal(7, input.Value<int>("version"));
 
                 return new HttpResponseMessage(HttpStatusCode.OK)
                 {
