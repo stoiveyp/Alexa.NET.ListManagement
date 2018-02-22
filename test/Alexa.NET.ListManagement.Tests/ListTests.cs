@@ -310,6 +310,12 @@ namespace Alexa.NET.ListManagement.Tests
             await client.DeleteList("list");
         }
 
+        [Fact]
+        public void ItemDeserializesCorrectly()
+        {
+            var item = Utility.ExampleFileContent<SkillListItem>("ListItem.json");
+            Assert.NotNull(item);
+        }
 
         private ListManagementClient CreateListManagementClient(Func<HttpRequestMessage, HttpResponseMessage> handlerAction)
         {

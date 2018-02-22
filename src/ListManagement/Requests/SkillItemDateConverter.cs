@@ -13,9 +13,13 @@ namespace Alexa.NET.ListManagement.Requests
         }
 
         public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
-        {
-            reader.Read();
-            var dateValue = reader.ReadAsString();
+        { 
+            if (reader.Value == null)
+            {
+                return null;
+            }
+
+            var dateValue = reader.Value.ToString();
 
                 return DateTime.ParseExact(dateValue.Replace("UTC", "+00:00"),
                     "ddd MMM dd HH:mm:ss zzz yyyy",
