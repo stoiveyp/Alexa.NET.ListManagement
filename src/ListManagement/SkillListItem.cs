@@ -20,11 +20,11 @@ namespace Alexa.NET.ListManagement
         [JsonProperty("version")]
         public int Version { get; set; }
 
-        [JsonProperty("createdTime"), JsonConverter(typeof(SkillItemDateConverter))]
-        public DateTime CreatedTime { get; set; }
+        [JsonProperty("createdTime")]
+        public string CreatedTime { get; set; }
 
-        [JsonProperty("updatedTime"), JsonConverter(typeof(SkillItemDateConverter))]
-        public DateTime UpdatedTime { get; set; }
+        [JsonProperty("updatedTime")]
+        public string UpdatedTime { get; set; }
 
         [JsonProperty("href")]
         public string Href { get; set; }
